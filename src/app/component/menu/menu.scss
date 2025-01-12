@@ -1,0 +1,9 @@
+@use '../../../styles/variables' as v;
+
+.product-list {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}

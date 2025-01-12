@@ -1,0 +1,29 @@
+
+.recipe-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: calc(100% / 2 - 30px);
+  overflow: hidden;
+  height: 500px;
+  border: 1px white solid;
+  justify-content: space-between;
+}
+
+.recipeItemName {
+  position: relative;
+  margin-bottom: 36px;
+  z-index: 20;
+}
+
+.recipeRating {
+  color: white;
+}
+
+.recipeItemImg {
+  position: relative;
+  width: 100%;
+  object-fit: cover;
+  height: calc(500px / 1.5);
+  z-index: 1;
+}

@@ -1,0 +1,83 @@
+.BookingPage {
+    background-image: url("../../../assets/img/pexels-ella-olsson-572949-1640773.jpg")  ;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.form-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #000; // Nền đen
+  color: #fff; // Màu chữ trắng
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffa500; // Màu cam cho tiêu đề
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+
+      label {
+        font-size: 14px;
+        margin-bottom: 8px;
+      }
+
+      input,
+      select {
+        padding: 10px;
+        font-size: 14px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        background-color: #222; // Màu nền đen nhạt
+        color: #fff;
+
+        &:focus {
+          outline: none;
+          border-color: #ffa500; // Màu cam khi focus
+        }
+      }
+
+      input[type="checkbox"] {
+        width: auto;
+        margin-right: 8px;
+      }
+
+      textarea {
+        min-height: 100px;
+      }
+    }
+
+    button {
+      padding: 12px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      background-color: #ffa500; // Nút màu cam
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #ff8c00; // Cam đậm hơn khi hover
+      }
+
+      &:active {
+        background-color: #e67e00;
+      }
+    }
+  }
+}
