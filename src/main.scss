@@ -51,3 +51,21 @@ a {
 .text-center {
     align-items: center;
 }
+
+.mt-30 {
+    margin-top: 30px;
+}
+
+.mr-30 {
+    margin-right: 30px;
+}
+
+.my-30 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.layout-content {
+    min-height: calc(100vh - 450px);
+    padding: 20px 100px;
+}

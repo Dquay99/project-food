@@ -10,7 +10,7 @@ export const MasterLayout = () => {
     <Layout style={{background: '#fff'}}>
       <HeaderComponent/>
 
-      <Content>
+      <Content className={'layout-content'}>
         <Outlet/>
       </Content>
 

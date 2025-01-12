@@ -29,15 +29,22 @@ export interface Sorting {
     order: string
 }
 
-
-export const getProducts = (page: number, sort: Sorting): Promise<RecipesResponse[]> => {
-    const limit = 10;
-    const skip = (page - 1) * limit;
-    return fetch(`https://dummyjson.com/recipes?limit=${limit}&skip=${skip}&sortBy=${sort.type}&order=${sort.order}`)
-        .then((response) => response.json());
+export interface Paging {
+    page: number;
+    size: number;
+    total?: number;
 }
 
-export const getProductDetail = (id: string): Promise<ProductModel> => {
-    return fetch(`https://dummyjson.com/recipes/${id}`)
-        .then((response) => response.json());
+
+export const getProducts = async (paging: Paging = {page: 1, size: 10}, sort: Sorting): Promise<RecipesResponse> => {
+    console.log("paging", paging)
+    const skip = (paging.page - 1) * paging.size;
+    const response = await fetch(`https://dummyjson.com/recipes?limit=${paging.size}&skip=${skip}&sortBy=${sort.type}&order=${sort.order}`);
+    console.log(response);
+    return await response.json();
+}
+
+export const getProductDetail = async (id: string): Promise<ProductModel> => {
+    const response = await fetch(`https://dummyjson.com/recipes/${id}`);
+    return await response.json();
 }

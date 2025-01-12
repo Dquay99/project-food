@@ -1,10 +1,12 @@
 @use '../../../../styles/variables' as v;
 
 .header-component {
-  padding: 10px 150px;
+  padding: 0 150px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 100px;
+  border-bottom: 1px solid #c5c5c5;
 
   .item {
     position: relative;

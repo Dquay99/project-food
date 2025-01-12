@@ -4,10 +4,12 @@ import {Button, Dropdown, MenuProps, Space} from "antd";
 import cart from '../../../../assets/img/cart.png';
 import logo from '../../../../assets/img/logo.png';
 import {DownOutlined, SearchOutlined, UserOutlined} from "@ant-design/icons";
-import {Link} from "react-router-dom";
+import {Link, useLocation} from "react-router-dom";
 
 
 export const HeaderComponent = () => {
+  const location = useLocation();
+
   const items: MenuProps['items'] = [
     {
       key: '1',
@@ -70,6 +72,13 @@ export const HeaderComponent = () => {
     }
   ]
 
+  const isActiveLink = (path: string): string => {
+    if (location.pathname === path) {
+      return "active"
+    }
+    return ""
+  }
+
   return (
     <div className={'header-component'}>
       <div className={'item'}>
@@ -78,11 +87,11 @@ export const HeaderComponent = () => {
             <img src={logo} alt="" className={'logo'}/>
           </li>
           <li>
-            <a href="/#" className={'active'}>Trang chủ</a>
+            <Link to={'/'} className={isActiveLink('/')}>Trang chủ</Link>
           </li>
           <li>
-            <Link to={'/menu'}>
-              <a href="">Thực đơn</a>
+            <Link to={'/menu'} className={isActiveLink('/menu')}>
+              Thực đơn
             </Link>
           </li>
           <li>

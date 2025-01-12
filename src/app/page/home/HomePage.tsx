@@ -1,6 +1,5 @@
 import {SliderComponent, SliderProps} from "../../component/slider/SliderComponent.tsx";
 import {BannerComponent} from "../../component/banner/BannerComponent.tsx";
-import MenuComponent from "../../component/menu/MenuComponent.tsx";
 import {PostComponent, PostProps} from "../../component/post/PostComponent.tsx";
 import {StepComponent, StepProps} from "../../component/step/StepComponent.tsx";
 import './home-page.scss';
@@ -79,7 +78,8 @@ const sliderItems: SliderProps = {
         `,
       path: '/#',
       description: 'Áp dụng cho tiệc tại Hà Nội, từ 15/11 - 20/11/2025'
-    },{
+    },
+    {
       image: img5,
       title: `
           <div>

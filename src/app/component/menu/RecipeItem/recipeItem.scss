@@ -3,27 +3,41 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  width: calc(100% / 2 - 30px);
   overflow: hidden;
   height: 500px;
-  border: 1px white solid;
+  border: 1px #d2d2d2 solid;
   justify-content: space-between;
+  border-radius: 5px;
+  transition: .3s;
+  flex: 1 1 calc(25% - 30px);
+
+  &:hover {
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  }
+
+  .item-img {
+    position: relative;
+    height: 79%;
+
+    .recipeItemImg {
+      position: relative;
+      width: 100%;
+      object-fit: cover;
+      height: 100%;
+      z-index: 1;
+      object-position: center;
+    }
+  }
+
+  .item {
+    position: relative;
+    height: 20%;
+    padding: 10px 20px;
+
+    .recipeItemName {
+      position: relative;
+      z-index: 20;
+    }
+  }
 }
 
-.recipeItemName {
-  position: relative;
-  margin-bottom: 36px;
-  z-index: 20;
-}
-
-.recipeRating {
-  color: white;
-}
-
-.recipeItemImg {
-  position: relative;
-  width: 100%;
-  object-fit: cover;
-  height: calc(500px / 1.5);
-  z-index: 1;
-}
